@@ -14,7 +14,8 @@ class TasksController < ApplicationController
   end
 
   def create
-
+    @task = Task.create(params[:task])
+    redirect_to tasks_path
   end
 
   def edit
@@ -22,11 +23,13 @@ class TasksController < ApplicationController
   end
 
   def update
-
+    @task.update(params[:task])
+    redirect_to tasks_path
   end
 
   def destroy
-
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private
