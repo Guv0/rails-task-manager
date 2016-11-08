@@ -1,5 +1,5 @@
-<h2><%= task.name %></h2>
-<p><%= task.description %></p>
-<p>Completed? <%= task.complete %>
+<h2>Task: <%= @task.name %></h2>
+<p>Description: <%= @task.description %></p>
+<p>Created at <%= @task.created_at %></p>
 <%= link_to "Go back to all tasks", tasks_path %>
 
